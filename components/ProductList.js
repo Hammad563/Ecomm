@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Product from './Product';
 import Title from './Title';
 import { ProductConsumer } from '../context';
+import {storeProducts} from '../data';
 
 export default class ProductList extends Component {
 
@@ -10,10 +11,11 @@ export default class ProductList extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="py-5">
+                <div className="py-5 d-flex">
                     <div className="container">
                         <Title name="our" title="products"> </Title>
                             <div className="row">
+                            
                                 <ProductConsumer>
                                     { (value) => {
                                        return value.products.map( product => {
@@ -22,6 +24,7 @@ export default class ProductList extends Component {
                                        
                                     }}
                                 </ProductConsumer>
+                                
                             </div>
                     </div>
 

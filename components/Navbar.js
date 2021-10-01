@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
 import styled from 'styled-components';
 import { ButtonContainer } from './Button';
+import logo1 from '../eway1.svg';
 
 export default class Navbar extends Component {
     render() {
@@ -12,14 +13,26 @@ export default class Navbar extends Component {
 https://www.iconfinder.com/icons/1243689/call_phone_icon
 Creative Commons (Attribution 3.0 Unported);
 https://www.iconfinder.com/Makoto_msk */}
+
+
+
             <Link to='/'>
-            <img src={logo} alt="store" className="navbar-brand" />
+            <img src={logo1} alt="store" className="navbar-brand" />
             </Link>
+
                     <ul className="navbar-nav align-items-center">
                         <li className="nav-item ms-5">
                             <Link to='/ProductList' className="nav-link">products</Link>
                         </li>
                     </ul>
+
+                    <ul className="navbar-nav align-items-center">
+                        <li className="nav-item ms-5">
+                            <Link to='/About' className="nav-link">About us</Link>
+                        </li>
+                    </ul>
+
+                    
             <Link to='/cart' className="ms-auto">
                 <ButtonContainer>
                     <span className="me-2">
@@ -35,9 +48,12 @@ https://www.iconfinder.com/Makoto_msk */}
 }
 
 const NavWrapper = styled.nav `
-background: var(--mainBlue);
+background: none;
+background-color: transparent;
+z-index: 100;
+flex =1;
 .nav-link{
-    color: var(--mainWhite) !important;
+    color: var(--maindark) !important;
     font-size: 1.5rem;
     text-transform: capitalize;
 }

@@ -7,6 +7,7 @@ import CartList from './CartList';
 import CartTotals from './CartTotals';
 
 
+
 export default class Cart extends Component {
     render() {
         return (
@@ -21,7 +22,7 @@ export default class Cart extends Component {
                                     <Title name="Cart checkout"></Title>
                                     <CartCol></CartCol>
                                     <CartList value={value}></CartList>
-                                    <CartTotals value={value}></CartTotals>
+                                    <CartTotals value={value} history={this.props.history}></CartTotals>
                                 </React.Fragment>
                                 
                             )
